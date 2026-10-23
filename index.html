@@ -4,47 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Web Page</title>
+    <title>Centered Login Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #eff6ff;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgb(15 23 42 / 12%);
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+            color: #173b70;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        button {
+            padding: 12px;
+            border: 0;
+            border-radius: 6px;
+            background: #173b70;
+            color: white;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #24549a;
+        }
+
+        .note {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+    <main class="page">
+        <section class="login-card">
+            <h1>Student Login</h1>
 
-    <header>
-        <h1>Welcome to My Web Page</h1>
-        <p>A simple introduction to HTML and web development.</p>
-    </header>
+            <form class="login-form" action="#" method="post">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
 
-    <nav>
-        <a href="#home">Home</a> |
-        <a href="#about">About</a> |
-        <a href="#contact">Contact</a>
-    </nav>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
 
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to my personal website. I am learning
-            HTML to create useful and attractive web pages.</p>
-        </section>
+                <button type="submit">Login</button>
+            </form>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a college student interested in technology,
-            computers, and web development.</p>
-
-            <h3>My Learning Goals</h3>
-            <ul>
-                <li>Learn HTML</li>
-                <li>Learn CSS</li>
-                <li>Build websites</li>
-            </ul>
+            <p class="note">Demonstration login form for HTML and CSS practice.</p>
         </section>
     </main>
-
-    <footer id="contact">
-        <h2>Contact</h2>
-        <p>Email: student@example.com</p>
-        <p>&copy; 2026 My Personal Web Page</p>
-    </footer>
-
 </body>
 </html>
